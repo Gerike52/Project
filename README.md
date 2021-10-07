@@ -6,4 +6,4 @@ A projektemnek egy rulett játékot fogok fogok fejleszteni ami javában lesz me
 
 projekt fejlesztés:
 
-1.hét: Read me fájl meírása és munkakörnyezet telepítése. :)
+1.hét: Read me fájl megírása és munkakörnyezet telepítése. :)
