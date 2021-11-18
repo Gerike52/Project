@@ -35,12 +35,15 @@ public class Game {
             }
         });
         frame.add(buttonv);
-        
+
         /*------------------------------Asztal------------------------------*/
 
         ArrayList<Integer> v =new ArrayList<Integer>();
-        
+        ArrayList<Integer> t =new ArrayList<Integer>();
+        ArrayList<Integer> p = new ArrayList<Integer>();
 
+
+        t.add(10);
 
 
         JButton g1 = new JButton();
@@ -122,7 +125,7 @@ public class Game {
                 }
             }
         });
-        
+
         JButton g6 = new JButton();
         g6.setBounds(1055,210,50,50);
         g6.setText("6");
@@ -138,7 +141,7 @@ public class Game {
                 }
             }
         });
-        
+
         JButton g7 = new JButton();
         g7.setBounds(1110,210,50,50);
         g7.setText("7");
@@ -154,7 +157,7 @@ public class Game {
                 }
             }
         });
-        
+
         JButton g8 = new JButton();
         g8.setBounds(1165,210,50,50);
         g8.setText("8");
@@ -619,8 +622,119 @@ public class Game {
             }
         });
 
-        
+        JButton g0 = new JButton();
+        g0.setBounds(1000,100,160,50);
+        g0.setText("0");
+        g0.setBackground(Color.GREEN);
+        g0.setForeground(Color.BLACK);
+        g0.setFocusable(false);
+        g0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== g0) {
+                    v.add(0);
+                    g0.setEnabled(false);
+                }
+            }
+        });
 
+        /*---------------Tétek----------------*/
+
+        JButton t50 = new JButton();
+        t50.setBounds(100,695,200,68);
+        t50.setText("50");
+        t50.setBackground(Color.DARK_GRAY);
+        t50.setForeground(Color.white);
+        t50.setFocusable(false);
+        t50.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== t50) {
+                    t.remove(0);
+                    t.add(50);
+                }
+            }
+        });
+
+        JButton t100 = new JButton();
+        t100.setBounds(325,695,200,68);
+        t100.setText("100");
+        t100.setBackground(Color.DARK_GRAY);
+        t100.setForeground(Color.white);
+        t100.setFocusable(false);
+        t100.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== t100) {
+                    t.remove(0);
+                    t.add(100);
+                }
+            }
+        });
+
+        JButton t250 = new JButton();
+        t250.setBounds(550,695,200,68);
+        t250.setText("250");
+        t250.setBackground(Color.DARK_GRAY);
+        t250.setForeground(Color.white);
+        t250.setFocusable(false);
+        t250.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== t250) {
+                    t.remove(0);
+                    t.add(250);
+                }
+            }
+        });
+
+        JButton t500 = new JButton();
+        t500.setBounds(775,695,200,68);
+        t500.setText("500");
+        t500.setBackground(Color.DARK_GRAY);
+        t500.setForeground(Color.white);
+        t500.setFocusable(false);
+        t500.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== t500) {
+                    t.remove(0);
+                    t.add(500);
+                }
+            }
+        });
+
+        /*-----------------------------------------------*/
+
+        JButton piros = new JButton();
+        piros.setBounds(945,300,50,100);
+        piros.setText("");
+        piros.setBackground(Color.RED);
+        piros.setFocusable(false);
+        piros.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== piros) {
+                  /*  Integer i;
+                    for(i=0;i<v.size();i++)
+                        if( v.get() == p.get()) */
+                }
+            }
+        });
+        JButton fekete = new JButton();
+        fekete.setBounds(945,405,50,100);
+        fekete.setText("");
+        fekete.setBackground(Color.BLACK);
+        fekete.setFocusable(false);
+        fekete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== fekete) {
+
+                }
+            }
+        });
+        
         frame.add(g1);
         frame.add(g2);
         frame.add(g3);
@@ -657,9 +771,54 @@ public class Game {
         frame.add(g34);
         frame.add(g35);
         frame.add(g36);
-        // RB 0 EO
+        frame.add(g0);
+        frame.add(t50);
+        frame.add(t100);
+        frame.add(t250);
+        frame.add(t500);
+        frame.add(piros);
+        frame.add(fekete);
+
+        // RB 
 
         /*----------------------------------------------*/
+
+        JButton játék = new JButton();
+        játék.setBounds(500,100,160,50);
+        játék.setText("játék");
+        játék.setBackground(Color.LIGHT_GRAY);
+        játék.setForeground(Color.white);
+        játék.setFocusable(false);
+        játék.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e ) {
+                if(e.getSource()== játék) {
+                    frame.repaint();
+                }
+            }
+        });
+        frame.add(játék);
+        /*
+            
+
+       ArrayList<Integer> z =new ArrayList<Integer>();
+        Random random = new Random();
+        int x = random.nextInt(37);
+        Integer ix = Integer.valueOf(x);
+
+        z.add(ix);
+
+        Integer y;
+        for(y=0;y<v.size();y++){
+
+            if ( z.get(y) == v.get(y)){
+                Integer c=0;
+                c += c + 1;
+
+            }
+        }
+
+*/
 
 
     }
